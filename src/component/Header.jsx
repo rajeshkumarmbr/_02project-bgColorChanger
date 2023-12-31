@@ -1,7 +1,10 @@
 import React from 'react';
+import Dropdown from './DropMenu';
+import { useState } from 'react';
 
 
 const Header = () =>{
+    const [drop, setDrop] = useState("fulse");
     return (
         <nav className="bg-gray-800 text-white p-4">
         <div className="container mx-auto">
@@ -11,7 +14,7 @@ const Header = () =>{
               <li><a href="#" className="hover:text-gray-400">Home</a></li>
               <li><a href="#" className="hover:text-gray-400">About</a></li>
               <li><a href="#" className="hover:text-gray-400">Services</a></li>
-              <li><a href="#" className="hover:text-gray-400">Contact</a></li>
+              <li  onClick={() => {Dropdown}}><a href="#" className="hover:text-gray-400">Contact</a></li>
             </ul>
           </div>
         </div>
